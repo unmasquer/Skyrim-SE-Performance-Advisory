@@ -1,5 +1,5 @@
 # Skyrim-SE-Performance-Guide
-Instructs necessary settings, makes suggestions and inquiries. 
+points to some settings necessary for avoiding performance degredation.
 
 so far four significant discoveries: 
 
@@ -10,4 +10,4 @@ edit: apparently nvidia suggests matching MFL to SBC (MaxFrameLatency and SwapBu
 4. You can bolster flip_discard by setting MaxFrameLatency and SwapBuffer to 16 and 8 respectively (have not tried values other than stock and this extreme config), but this may come at the cost of latency, you'll have to feel it out in game. SwapEffect, SwapBuffer, and MaxFrameLatency can be tweaked in SSEDisplayTweaks. 
 5. At the very least, CS's implementation of DLSSG sees significant frametime degredation when using RTSS or Display Tweak's framepacing favoring method of frame limiting instead of NVCP. Do not own an AMD card, so can't verify that side of things. 
 
-All of these have been repeatedly benchmarked in a high fps environment. 
+all of these have been repeatedly benchmarked for consistency. 
