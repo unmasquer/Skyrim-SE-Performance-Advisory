@@ -1,7 +1,7 @@
 # Skyrim-SE-Performance-Guide
 points to some settings necessary for avoiding performance degredation.
 
-so far four significant discoveries: 
+significant discoveries so far: 
 
 1. Do not set a target fps that deviates far from what the computer can sustain. 
 2. Do not disable Hardware Accelerated GPU Scheduling. 
