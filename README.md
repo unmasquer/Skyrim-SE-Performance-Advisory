@@ -9,5 +9,6 @@ significant discoveries so far:
 edit: apparently nvidia suggests matching MFL to SBC (MaxFrameLatency and SwapBufferCount) when using flip_discard. flip_sequential seems depreciated as whatever lossiness discard has is either old news or a bit of a misnomer. so if prioritizing smoothness, flip_discard + MFL=8 and SBC=8. want to try verifying this because I've had my best results with MFL=16 and SBC=8.
 4. You can bolster flip_discard by setting MaxFrameLatency and SwapBuffer to 16 and 8 respectively (have not tried values other than stock and this extreme config), but this may come at the cost of latency, you'll have to feel it out in game. SwapEffect, SwapBuffer, and MaxFrameLatency can be tweaked in SSEDisplayTweaks. 
 5. At the very least, CS's implementation of DLSSG sees significant frametime degredation when using RTSS or Display Tweak's framepacing favoring method of frame limiting instead of NVCP. Do not own an AMD card, so can't verify that side of things. 
+6. At the very least, Pure Dark's implementation of FG also sees signfiicant frametime degredation when using RTSS or Display Tweaks framepacing favoring method of frame limiting instead of NVCP. Still don't own an AMD card.  
 
 all of these have been repeatedly benchmarked for consistency. 
