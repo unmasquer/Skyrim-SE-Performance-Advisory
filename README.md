@@ -1,4 +1,4 @@
-# Skyrim-SE-Performance-Guide
+# Skyrim-SE-Performance-Advisory
 points to some settings necessary for avoiding performance degredation.
 
 significant discoveries so far: 
