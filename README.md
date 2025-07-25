@@ -1,7 +1,8 @@
 # Skyrim-SE-Performance-Advisory
-Points to some settings necessary for avoiding performance degredation.
 
 Real optimization isn’t about chasing raw FPS — it’s about minimizing worst-case performance and smoothing frame delivery.
+
+This page points to some settings necessary for avoiding performance degredation.
 
 Significant discoveries so far in no particular order: 
 
