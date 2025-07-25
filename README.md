@@ -10,7 +10,7 @@ Significant discoveries so far in no particular order:
    swapchain/renderque one as well, which is an issue across virtually all games and render APIs afaik. (Frametime Performance impact: Very Very Very High)
 
 2. Do not disable Hardware Accelerated GPU Scheduling.
-   Skyrim is already CPU bottlenecked, and so when HAGS is off, every frame requires more CPU intervention, which severely harms performance based off my testing. (Frametime Perf Impact: Very Very High)
+   Skyrim is already CPU bottlenecked, and so when HAGS is off, every frame requires more CPU intervention, which severely harms performance based on my testing. (Frametime Perf Impact: Very Very High)
 
 3. flip_discard is best at softening the blow caused by the two above.
    edit: apparently nvidia suggests matching MFL to SBC (MaxFrameLatency and SwapBufferCount) when using flip_discard. flip_sequential seems depreciated as whatever lossiness discard has is either old news or a bit 
