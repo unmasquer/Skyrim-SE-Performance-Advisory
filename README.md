@@ -35,4 +35,4 @@ Significant discoveries so far in no particular order:
    the  affinity tool settings.  (Frametime Performance impact: Minimal to batshit insanely bad)
    
 
-All of these have been repeatedly benchmarked for consistency. 
+All of these have been repeatedly benchmarked for consistency. Stay tuned, I will be livestreaming benchmarks of these settings on top of what's already been personally verified. Youtube link here: https://www.youtube.com/@wellyouthoughtwrong3429
