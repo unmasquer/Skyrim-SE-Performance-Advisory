@@ -42,12 +42,18 @@ Significant discoveries so far in no particular order:
 
 8. CPU Affinity plugin for MO2 should be avoided unless you know what you're doing in which case you're using something else to pick less contentious cores/aren't disabling SMT. 
    It seems more than likely cpu affinity mod more often than not harms performance. quick rundown on the mod: It sets affinity to 0-3 while disabling core 1 and 3. Even numbered cores are physical, and odd 
-   numbered cores are virtual. The mod removes multithreaded affinity from skyrim so it only uses one thread, the physical one. Done under the assumption Skyrim multithreads so poorly its better to disable SMT. 
+   numbered cores are virtual. The mod removes multithreaded affinity from skyrim so it only uses the main thread. Done under the assumption Skyrim multithreads so poorly its better to disable SMT. 
    This has not been proven anywhere, and on my testing with the 9800x3d, its actually catasrophically bad to disable -- the worst performance reported out of all of these settings. Also want to point out cores 0 
    and 2 may not  be your best performing and may not be the least contentious, meaning there may be much better cores to pin, and your system may already be using those better cores by default, but are being 
    overriden by the  affinity tool settings. (edit: someone kindly pointed out the mapping of physical and logical threads is not universally standardized across all CPUs. AMD doesn’t always follow the same even/odd split. Logical thread IDs 
    are OS-assigned and not guaranteed to follow even = physical, odd = SMT. On Ryzen 5000 and 7000 series, the thread ID order can differ depending on BIOS, chipset, Windows scheduler, and CCD/CCX structure. Consequentially, the "Set CPU 
    Affinity for Mod Organizer" tool only works according to design for some CPUs -- supposedly primarily Intel. 
+   TL;DR: this mod
+
+   (1) clamps skyrim to just two main threads when it could have used four. 
+   (2) clamps skyrim to two specific unique threads, effectively disabling thread bouncing if skyrim uses it. 
+   (3) clamps skyrim to threads likely to be hotly contentious. 
+   (4) disables smt when it's not been proven to benefit skyrim's performance. 
   
    (Frametime Performance impact: Minimal to batshit insanely bad)
    
