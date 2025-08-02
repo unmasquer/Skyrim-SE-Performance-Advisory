@@ -19,23 +19,24 @@ Significant discoveries so far in no particular order:
 
 4. flip_discard is best at softening the blow caused by the two above.
    edit: apparently nvidia suggests matching MFL to SBC (MaxFrameLatency and SwapBufferCount) when using flip_discard. flip_sequential seems depreciated as whatever lossiness discard has is either old news or a 
-   bit of a misnomer. so if prioritizing smoothness, flip_discard + MFL=8 and SBC=8. want to try verifying this because I've had my best results with MFL=16 and SBC=8. 
-   
+   bit of a misnomer. 
+
    (Frametime Perf Impact: High, but only if PC 
    is rendering unconstrained (dont do that))
 
 5. You can bolster flip_discard by setting MaxFrameLatency and SwapBuffer to 16 and 8 respectively (have not tried values other than stock and this extreme config), but this may come at the cost of latency, you'll 
-   have to feel it out in game. SwapEffect, SwapBuffer, and MaxFrameLatency can be tweaked in SSEDisplayTweaks. 
+   have to feel it out in game. SwapEffect, SwapBuffer, and MaxFrameLatency can be tweaked in SSEDisplayTweaks. So if prioritizing smoothness, flip_discard + MFL=8 and SBC=8. want to try verifying this because I've had my best results with 
+   MFL=16 and SBC=8. 
    
    (Frametime Perf Impact: Moderate, but only if PC is 
    rendering unconstrained (dont do that))
 
-6. At the very least, Community Shader's implementation of DLSSG sees significant frametime degredation when using Rivatuner Statistics Server or Display Tweak's framepacing favoring method of frame limiting 
+6. At the very least, Community Shader's implementation of DLSSG sees significant frametime degredation when using Rivatuner Statistics Server's Async/Front or Back Edge Sync, or Display Tweak's framepacing favoring method of frame limiting 
    instead of NVCP. Do not own an AMD card, so can't verify that side of things. 
    
    (Frametime Performance impact: Very Very High)
 
-7. At the very least, Pure Dark's implementation of Frame Generation also sees signfiicant frametime degredation when using Rivatuner Statistics Server or Display Tweaks framepacing favoring method of frame 
+7. At the very least, Pure Dark's implementation of Frame Generation also sees signfiicant frametime degredation when using Rivatuner Statistics Server's Async/Front or Back Edge Sync, or Display Tweaks framepacing favoring method of frame 
    limiting instead of Nvidia Control Panel. Still don't own an AMD card. 
    
    (Frametime Performance impact: Very Very Very High)
